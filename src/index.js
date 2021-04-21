@@ -12,6 +12,12 @@ const onClickAdd = () => {
   const p = document.createElement("p");
   p.innerText = inputText;
 
+  const completeButton = document.createElement("button");
+  completeButton.innerText = "完了";
+
+  const deleteButton = document.createElement("button");
+  deleteButton.innerText = "削除";
+
   li.appendChild(div);
   div.appendChild(p);
 
