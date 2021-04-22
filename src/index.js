@@ -28,6 +28,13 @@ const onClickAdd = () => {
 
     const backbutton = document.createElement("button");
     backbutton.innerText = "戻す";
+    backbutton.addEventListener("click", () => {
+      const deleteTarget = backbutton.parentNode;
+      document.getElementById("complete-list").removeChild(deleteTarget);
+
+      const text = backbutton.parentNode.firstElementChild.innerText;
+      createIncompleteList(text);
+    });
 
     addTarget.appendChild(p);
     addTarget.appendChild(backbutton);
@@ -52,6 +59,11 @@ const onClickAdd = () => {
 
 const deleteFromIncompleteList = (target) => {
   document.getElementById("incomplete-list").removeChild(target);
+};
+
+const createIncompleteList = (text) => {
+  const div = document.createComment("div");
+  div.className = "list-row";
 };
 
 document
