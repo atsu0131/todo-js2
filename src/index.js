@@ -20,6 +20,8 @@ const onClickAdd = () => {
 
   li.appendChild(div);
   div.appendChild(p);
+  div.appendChild(completeButton);
+  div.appendChild(deleteButton);
 
   document.getElementById("incomplete-list").appendChild(li);
 };
